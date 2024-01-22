@@ -6,7 +6,7 @@ if (empty($_SESSION['token'])) {
     $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 }
 $availableRoutes = [
-    'login', 'products', 'panier', 'contact', 'profil'
+    'login', 'products', 'panier', 'contact', 'profil','register','cat1','cat2'
 ];
 
 if (isset($_GET['path']) && in_array($_GET['path'], $availableRoutes)) {
@@ -18,7 +18,7 @@ if (isset($_GET['path']) && in_array($_GET['path'], $availableRoutes)) {
             header('location: index.php');
     }
 } else {
-    $_SESSION['page']['path'] = 'home.php';
+    $_SESSION['page']['path'] = 'home';
 }
 
 require 'layout.php';

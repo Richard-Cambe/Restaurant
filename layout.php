@@ -12,11 +12,12 @@
     <header>
         <section class="navbar">
             <a href="index.php" title="logo">
-                <img class='logo' src="assets/Xtwitt.png" alt="restaurant">
+                <img class='logo' src="assets/img/logo.png" alt="restaurant">
             </a>
             <h3 class="title">"Le Coda"</h3>
             <?php if (empty($_SESSION['user'])) {
                 echo '<a href="index.php?path=login" title="Se connecter">Se connecter</a>';
+                echo '<a href="index.php?path=register" title="Register">Créer un compte</a>';
             } else {
                 echo '<a href="index.php?path=deconnection" title="Se déconnecter">Se déconnecter</a>';
             }
@@ -35,7 +36,7 @@
     </main>
 
     <footer>
-        <p class="mentions">Mentions légales bla bla bla blabla 2023 ©Copyrights Kappa2023</p>
+        <p class="mentions">Mentions légales bla bla bla blabla 2024 ©Copyrights Kappa2024</p>
     </footer>
 </body>
 

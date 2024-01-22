@@ -1,4 +1,6 @@
 <?php
+require 'data/dataconnect.php';
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($_POST['email'])) {
         echo 'The e-mail is empty';
@@ -10,19 +12,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo $_POST['email'] . 'Is not a valid email address.';
     } else {
         $email = $_POST['email'];
-        $password = md5($_POST['password']);
-        $query = "SELECT * FROM users AS s WHERE s.email=:email and s.password=:password";
+       
+        $query = "SELECT * FROM users AS u WHERE u.email=:email";
         $response = $bdd->prepare($query);
         $response->execute([
             ":email" => $email,
-            ":password" => $password
         ]);
         $data = $response->fetch();
 
         if (!empty($data)) {
-            if ($data['email'] === $email && $data['password'] === $password) {
+            if(password_verify($_POST['password'],$data['password'])){
                 $_SESSION['user']['id'] = $data['id'];
                 $_SESSION['user']['is_admin'] = $data['is_admin'];
+                var_dump($_SESSION);
                 header('location: index.php');
                 exit();
             }

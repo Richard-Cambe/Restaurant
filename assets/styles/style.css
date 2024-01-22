@@ -5,6 +5,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+.logo {
+  width: 30%;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -14,20 +17,20 @@ body {
 }
 .button {
   padding: 0.12rem;
-  border: solid 2px #a75265;
+  border: solid 2px #fff2fc;
   border-radius: 5px;
   background-color: white;
-  color: #a75265;
+  color: #ceceff;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 .button:hover {
   background: blanchedalmond;
-  color: #a75265;
+  color: #ceceff;
 }
 
 header .title {
-  color: #a75265;
+  color: #ceceff;
   font-size: 180%;
 }
 header .navbar {
@@ -38,14 +41,14 @@ header .navbar {
   text-decoration: none;
   font-size: 100%;
   font-weight: bold;
-  color: #a75265;
+  color: #ceceff;
 }
 header nav {
   margin-right: 1rem;
 }
 header nav a {
   text-decoration: none;
-  color: #a75265;
+  color: #ceceff;
   font-size: 20px;
 }
 
@@ -80,14 +83,13 @@ header nav a {
   display: flex;
   justify-content: center;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 .login {
   display: flex;
   justify-content: center;
 }
 .login-card {
-  background-color: #a75265;
+  background-color: #ceceff;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -113,9 +115,49 @@ header nav a {
   display: flex;
   justify-content: center;
 }
-.products-product-card{
+.products-product-card {
+  display: column;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  width: 20%;
+  height: auto;
+  border: solid;
+  border-radius: 2%;
+}
+.products-product-card > img {
+  box-sizing: border-box;
+  border-radius: 2%;
+  width: 100%;
+}
+.products-product-card > h3 {
+  justify-content: center;
+  text-align: center;
+}
+.products-product-card > p {
+  justify-content: center;
+  text-align: center;
+}
+.allCat {
   display: flex;
-  border-radius: 20%;
-  border:solid;
-  
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 5em;
+  margin-bottom: 4.5em;
+}
+.GiantCard > img {
+  box-sizing: border-box;
+  border-radius: 2%;
+  width: 30em;
+}
+.GiantCard > h3 {
+  text-align: center;
+}
+.GiantCard > p {
+  text-align: center;
+}
+.AllProducts {
+  display: flex;
 }
