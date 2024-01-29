@@ -1,12 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
 * {
+  font-family: "Italianno";
   list-style-type: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  background-color: rgb(255, 235, 205);
 }
+
 .logo {
-  width: 30%;
+  width: 8rem;
+  height: 8rem;
+  margin-top: 0.5rem;
+  margin-right: -10rem;
+  align-self: left;
+}
+.logo > a {
+  margin-right: -10em;
+  align-self: left;
+  background-color: blanchedalmond;
+}
+
+hr {
+  justify-content: center;
+  align-self: center;
+  width: 60%;
+  margin-bottom: 2rem;
 }
 body {
   display: flex;
@@ -20,36 +40,45 @@ body {
   border: solid 2px #fff2fc;
   border-radius: 5px;
   background-color: white;
-  color: #ceceff;
+  color: #5c3f61;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 .button:hover {
   background: blanchedalmond;
-  color: #ceceff;
+  color: #5c3f61;
 }
-
 header .title {
-  color: #ceceff;
-  font-size: 180%;
+  color: #5c3f61;
+  font-size: 300%;
 }
 header .navbar {
   display: flex;
   justify-content: space-between;
+  margin-right: 8rem;
+  margin-left: 8rem;
   align-items: center;
   background-color: blanchedalmond;
   text-decoration: none;
   font-size: 100%;
-  font-weight: bold;
-  color: #ceceff;
+  color: #5c3f61;
 }
 header nav {
-  margin-right: 1rem;
+  margin-right: 11rem;
+  margin-left: 20rem;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 }
 header nav a {
   text-decoration: none;
-  color: #ceceff;
-  font-size: 20px;
+  color: #5c3f61;
+  font-size: 30px;
+}
+.logs {
+  margin-right: 2rem;
+  font-size: 30px;
+  justify-content: space-between;
 }
 
 .profil-login {
@@ -115,49 +144,75 @@ header nav a {
   display: flex;
   justify-content: center;
 }
-.products-product-card {
-  display: column;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registerform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  justify-content: center;
+  align-self: center;
+  width: 60%;
+  border: solid 1px black;
+  margin-left: 19.2rem;
+  font-size: 200%;
+}
+h4 {
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.allProducts {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product {
   width: 20%;
-  height: auto;
-  border: solid;
-  border-radius: 2%;
+  max-height: 406px;
+  font-size: 200%;
+  border: solid 1px;
+  border-radius: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.products-product-card > img {
-  box-sizing: border-box;
-  border-radius: 2%;
+.product > img {
   width: 100%;
+  height: 50%;
 }
-.products-product-card > h3 {
-  justify-content: center;
-  text-align: center;
-}
-.products-product-card > p {
-  justify-content: center;
-  text-align: center;
-}
-.allCat {
+.allCategories {
   display: flex;
-  justify-content: space-around;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-top: 5em;
-  margin-bottom: 4.5em;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.GiantCard > img {
-  box-sizing: border-box;
-  border-radius: 2%;
-  width: 30em;
-}
-.GiantCard > h3 {
-  text-align: center;
-}
-.GiantCard > p {
-  text-align: center;
-}
-.AllProducts {
+.category {
+  width: 20%;
+  max-height: 406px;
+  font-size: 200%;
+  border: solid 1px;
+  border-radius: 3%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.category > img {
+  width: 100%;
+  height: 50%;
+}
+
+/*Mobile
+@media only screen and (max-width: 768px){}
+*/

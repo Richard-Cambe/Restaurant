@@ -23,8 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (!empty($data)) {
             if(password_verify($_POST['password'],$data['password'])){
                 $_SESSION['user']['id'] = $data['id'];
-                $_SESSION['user']['is_admin'] = $data['is_admin'];
-                var_dump($_SESSION);
+                $_SESSION['user']['is_admin'] = $data['admin'];
                 header('location: index.php');
                 exit();
             }

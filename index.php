@@ -1,12 +1,12 @@
 <?php
 session_start();
-// session_destroy();
+
 require 'data/dataconnect.php';
 if (empty($_SESSION['token'])) {
     $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 }
 $availableRoutes = [
-    'login', 'products', 'panier', 'contact', 'profil','register','cat1','cat2'
+    'login', 'products', 'orders', 'contact', 'profil', 'register', 'catprod', 'deconnection', 'platdelete', 'catdelete', 'mycart'
 ];
 
 if (isset($_GET['path']) && in_array($_GET['path'], $availableRoutes)) {
@@ -14,6 +14,7 @@ if (isset($_GET['path']) && in_array($_GET['path'], $availableRoutes)) {
     switch ($_SESSION['page']['path']) {
         case 'deconnection':
             unset($_SESSION['user']);
+            session_destroy();
             $_SESSION['page']['path'] = 'home';
             header('location: index.php');
     }
