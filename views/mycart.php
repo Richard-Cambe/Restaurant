@@ -11,13 +11,13 @@ $newCart = new Cart();
   <tbody>
     <tr>
       <td>Article</td>
-      <p></p>
+      <p><?php ?></p>
       <td>Quantité</td>
-      <p><?php ?> </p>
+      <p><?php ?></p>
       <td>Prix unitaire</td>
-      <p><?php ?> </p>
+      <p><?php ?></p>
       <td>Prix Total</td>
-      <p><?php ?> </p>
+      <p><?php ?></p>
     </tr>
   </tbody>
 </table>

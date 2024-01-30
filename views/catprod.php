@@ -1,17 +1,19 @@
+<div class="allProducts">
+    <?php
+    foreach ($datas as $data) { ?>
+            <div class='product'>
+                <img src="./assets/img/<?= $data['pro_pic'] ?>">
+                <h3><?= $data['pro_name'] ?></h3>
+                <p><?= $data['pro_desc'] ?></p>
+                <p><?= $data['pro_price'] ?></p>
+                <form action='?path=platdelete' method='POST'><input type='hidden' id='id' name='id' value='<?= $data['id'] ?>'>
+                    <?php if (isset($_SESSION['user']['is_admin']) &&  $_SESSION['user']['is_admin'] === 1) { ?>
+                        <button>Supprimer<?php } ?>
+                </form>
+            </div>
+    <?php } ?>
+</div>
 
-<?php
-foreach ($query as $data) { ?>
-    <div class='product'>
-        <img><?= $data['pro_pic'] ?></img>
-        <h3><?= $data['pro_name'] ?></h3>
-        <p><?= $data['pro_desc'] ?></p>
-        <p><?= $data['pro_price'] ?></p>
-        <form action='?path=platdelete' method='POST'><input type='hidden' id='id' name='id' value='<?= $data['id'] ?>'>
-            <?php if (isset($_SESSION['user']['is_admin']) &&  $_SESSION['user']['is_admin'] === 1) { ?>
-                <button>Supprimer<?php } ?>
-        </form>
-    </div>
-<?php } ?>
 <?php
 if (isset($_SESSION['user']['is_admin']) &&  $_SESSION['user']['is_admin'] === 1) { ?>
     <form class="creation" action="?path=catprod" method="POST">

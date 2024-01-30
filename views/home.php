@@ -7,13 +7,12 @@
             <img src="./assets/img/<?= $data['cat_pic'] ?>">
             <h3><?= $data['cat_name'] ?></h3>
             <p><?= $data['cat_desc'] ?></p>
-            <a href='?path=catprod&categorie_id=<?=$data['id']?>'><button>Voir les produits </button></a>
+            <a href='?path=catprod&categorie_id=<?= $data['id'] ?>'><button> Voir les produits </button></a>
             <form action='?path=catdelete' method='POST'><input type='hidden' id='id' name='id' value='<?= $data['id'] ?>'>
                 <?php if (isset($_SESSION['user']['is_admin']) &&  $_SESSION['user']['is_admin'] === 1) { ?>
-                    <button>DELETE<?php } ?>
+                    <button> DELETE <?php } ?>
             </form>
         </div>
-
     <?php } ?>
 </div>
 

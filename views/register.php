@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form class ="registerform" action="" method="POST">
     <ul>
         <label for="firstname"></label>
         <input type="text" id="firstname" name="firstname" placeholder="First Name" required />
